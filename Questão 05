@@ -1,0 +1,38 @@
+ista = {}
+alunos = {}
+lista_alunos = []
+cont = c = 0
+matricula = ""
+def ler():
+    global matricula
+    matricula = input("Informe a matricula do aluno: ")
+    return matricula
+
+def matriculas():
+    while ler() != "":
+        dados.clear()
+        dados["nome"] = str(input("Digite o nome do aluno: ")).strip()
+        dados["matricula"] = matricula
+        dados["nota1"] = float(input("Digite a 1º nota: "))
+        dados["nota2"] = float(input("Digite a 2º nota: "))
+        s = dados["nota1"] + dados["nota2"]
+        dados["media"] = round(s/2, 1)
+        lista.append(dados.copy())
+    return lista
+m = matriculas()
+
+while True:
+    chave = str(input("Informe a matricula para buscar o nome e media do aluno: "))
+    for p in lista:
+        if str(chave) == p['matricula']:
+            alunos.clear()
+            alunos["nomes"] = p['nome']
+            alunos["medias"] = p['media']
+            lista_alunos.append(alunos.copy())
+            cont = cont + 1
+    if chave == "":
+        break
+
+for n in lista_alunos:
+    print(f'["nomes"]}: ["medias"]}')
+    
