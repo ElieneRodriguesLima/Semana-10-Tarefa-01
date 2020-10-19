@@ -1,0 +1,16 @@
+cod = 100
+titulo = ''
+def ler():
+    global titulo
+    titulo = str(input('Qual título do livro: ')).strip()
+    return titulo
+
+while ler() != '':
+    isbn = input('ISBN do livro: ').strip()
+    autor = input('Qual o autor do livro?: ').strip()
+    preco = float(input('Informe o preço do livro: '))
+    cod = cod + 1
+    if titulo =='':
+        break
+    print(f'Código: {cod}\nTítulo: {titulo}\nISBN: {isbn}\nAutor: {autor}\nPreço: {preco:.2f}')
+
